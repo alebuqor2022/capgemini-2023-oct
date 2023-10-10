@@ -8,8 +8,8 @@ public class Ejemplo1 {
 		String saludo=mostrarSaludo();
 		verSaludo(saludo);
 		// caso con Lambda
-		Consumer<String> saludo1= s -> System.out.println("buen dia");
-		System.out.println(saludo1.toString());
+		Consumer<String> saludo1= s -> System.out.println(s);
+		saludo1.accept("chau");
 		
 	}
 	
