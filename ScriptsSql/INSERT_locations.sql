@@ -1,0 +1,7 @@
+INSERT INTO `capgemini_asturias`.`locations` (`location_id`, `street_address`, `postal_code`, `city`, `state_province`, `country_id`) VALUES ('1400', 'Guemes 123', '8967', 'Langreo', 'Asturias', '1');
+INSERT INTO `capgemini_asturias`.`locations` (`location_id`, `street_address`, `postal_code`, `city`, `state_province`, `country_id`) VALUES ('1500', 'San Martin 789', '2244', 'Chamartin', 'Madrid', '1');
+INSERT INTO `capgemini_asturias`.`locations` (`location_id`, `street_address`, `postal_code`, `city`, `state_province`, `country_id`) VALUES ('1600', 'Pacifica 173', '1674', 'Segovia', 'Madrid', '1');
+INSERT INTO `capgemini_asturias`.`locations` (`location_id`, `street_address`, `postal_code`, `city`, `state_province`, `country_id`) VALUES ('1700', 'Pintores 9999', '8273', 'Oviedo', 'Asturias', '1');
+INSERT INTO `capgemini_asturias`.`locations` (`location_id`, `street_address`, `postal_code`, `city`, `state_province`, `country_id`) VALUES ('1800', 'Colon 2893', '2342', 'Campana', 'Buenos Aires', '2');
+INSERT INTO `capgemini_asturias`.`locations` (`location_id`, `street_address`, `postal_code`, `city`, `state_province`, `country_id`) VALUES ('1900', 'Rawson 9679', '23442', 'Rosario', 'Santa Fe', '2');
+INSERT INTO `capgemini_asturias`.`locations` (`location_id`, `street_address`, `postal_code`, `city`, `state_province`, `country_id`) VALUES ('2000', 'Moreno 897', '2341', 'Zarate', 'Buenos Aires', '2');
