@@ -5,3 +5,10 @@ INSERT INTO `capgemini_asturias`.`employees` (`employee_id`, `first_name`, `last
 INSERT INTO `capgemini_asturias`.`employees` (`employee_id`, `first_name`, `last_name`, `email`, `phone_number`, `job_id`, `salary`, `commission_pct`, `manager_id`, `department_id`) VALUES ('103', 'King', 'Sergio', 'ser@gmail', '555', '4', '2000', '13', '149', '90');
 INSERT INTO `capgemini_asturias`.`employees` (`employee_id`, `first_name`, `last_name`, `email`, `phone_number`, `job_id`, `salary`, `commission_pct`, `manager_id`, `department_id`) VALUES ('104', 'Higgins', 'Pedro', 'pr@gmail', '666', '5', '7000', '15', '200', '110');
 INSERT INTO `capgemini_asturias`.`employees` (`employee_id`, `first_name`, `last_name`, `email`, `phone_number`, `job_id`, `salary`, `commission_pct`, `manager_id`) VALUES ('105', 'Grant', 'Luis', 'gr@gmail', '777', '2', '8500', '17', '201');
+
+UPDATE `capgemini_asturias`.`employees` SET `hire_date` = '2001-11-07' WHERE (`employee_id` = '100');
+UPDATE `capgemini_asturias`.`employees` SET `hire_date` = '2002-08-01' WHERE (`employee_id` = '101');
+UPDATE `capgemini_asturias`.`employees` SET `hire_date` = '2005-1-31' WHERE (`employee_id` = '102');
+UPDATE `capgemini_asturias`.`employees` SET `hire_date` = '2010-04-01' WHERE (`employee_id` = '103');
+UPDATE `capgemini_asturias`.`employees` SET `hire_date` = '2015-06-09' WHERE (`employee_id` = '104');
+UPDATE `capgemini_asturias`.`employees` SET `hire_date` = '2020-03-01' WHERE (`employee_id` = '105');
