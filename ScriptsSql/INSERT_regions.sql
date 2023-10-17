@@ -1,0 +1,10 @@
+INSERT INTO `capgemini_asturias`.`regions` (`region_id`, `region_name`) VALUES ('1', 'Asturias');
+INSERT INTO `capgemini_asturias`.`regions` (`region_id`, `region_name`) VALUES ('2', 'Valenciana');
+INSERT INTO `capgemini_asturias`.`regions` (`region_id`, `region_name`) VALUES ('3', 'Cataluña');
+INSERT INTO `capgemini_asturias`.`regions` (`region_id`, `region_name`) VALUES ('4', 'Vasca');
+INSERT INTO `capgemini_asturias`.`regions` (`region_id`, `region_name`) VALUES ('5', 'Madrid');
+INSERT INTO `capgemini_asturias`.`regions` (`region_id`, `region_name`) VALUES ('6', 'Patagonia');
+INSERT INTO `capgemini_asturias`.`regions` (`region_id`, `region_name`) VALUES ('7', 'Mesopotamia');
+INSERT INTO `capgemini_asturias`.`regions` (`region_id`, `region_name`) VALUES ('8', 'Pampeana');
+INSERT INTO `capgemini_asturias`.`regions` (`region_id`, `region_name`) VALUES ('9', 'Texana');
+INSERT INTO `capgemini_asturias`.`regions` (`region_id`, `region_name`) VALUES ('10', 'otra');
