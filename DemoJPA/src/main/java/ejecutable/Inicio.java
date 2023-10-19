@@ -1,19 +1,28 @@
 package ejecutable;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
+import java.util.List;
 
+import dao.DaoCurso;
+import dao.DaoEstudiante;
 import dao.DaoPersona;
+import model.Curso;
+import model.Estudiante;
 import model.Persona;
 
 public class Inicio {
 
 	public static void main(String[] args) {
+		// trabajando con Personas
 		//crearPersona();
-		buscarPersona(2L);
+		//buscarPersona(2L);
 		//actualizarPersona() ;
 		//borraPersona(1L);
-
+		// trabajando con Estudiantes y Cursos
+		testEstudianteCurso();
 	}
 	
 	public static void crearPersona() {
@@ -40,7 +49,46 @@ public class Inicio {
 	}
 	
 	public static void borraPersona(Long id) {
-		DaoPersona.delete(id);
+		DaoPersona.delete(id);		
+	}
+	
+	public static void testEstudianteCurso() {
+//		Curso c=new Curso();
+//		c.setNombre("Java");
+//		DaoCurso.create(c);
+//		Curso c1=new Curso();
+//		c1.setNombre("SQL");
+//		DaoCurso.create(c1);
+//		Curso c2=new Curso();
+//		c2.setNombre("CSS");
+//		DaoCurso.create(c2);
+//		
+//		Estudiante p=new Estudiante();
+//		p.setNombre("Jose");
+//		p.setApellido("Garcia");
 		
+		
+//		List<Curso> lista=new ArrayList<Curso>();
+//		lista.add(c);
+//		lista.add(c1);
+//		lista.add(c2);
+//		p.setCursos(lista);
+		
+//		DaoEstudiante.create(p);
+		
+		System.out.println("--------------Estudiante--------------");
+		Estudiante e1=DaoEstudiante.find(2L);
+		System.out.println(e1.getNombre() + " " +e1.getApellido());
+		System.out.println("--------------Cursos--------------");
+		List<Curso> listado=DaoCurso.findAllCursos(2L);
+		
+				
+		for(Object o: listado) {
+			System.out.println(resultado(o));
+		}
+		
+	}
+	private static String resultado(Object o) {
+		return Arrays.asList((Object[])o).toString();
 	}
 }
