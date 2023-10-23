@@ -1,6 +1,7 @@
 package com.capgemini;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -34,9 +35,33 @@ private UserRepository repositorio;
 		return repositorio.save(u);
 	}
 
-	@Override
+//	@Override
+//	public User modificar(User u) {
+//		return repositorio.save(u);
+//	}
+	
 	public User modificar(User u) {
-		return repositorio.save(u);
+
+		User original = repositorio.findById(u.getId()).get();
+		
+		if (u.getNombre()!=null ) {
+			original.setNombre(u.getNombre());
+		}
+	
+		if (u.getApellido()!=null ) {
+		original.setApellido(u.getApellido());
+		}
+		
+		if (u.getFechaNacimiento()!=null ) {
+		original.setFechaNacimiento(u.getFechaNacimiento());
+		}
+		
+		if (u.getArea()!=null ) {
+		original.setArea(u.getArea());
+		}
+
+		return repositorio.save(original);
+
 	}
 
 	@Override
