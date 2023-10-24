@@ -32,12 +32,17 @@ public class CursoController {
 		return "redirect:/";
 	}
 	
-	public String deleteCurso() {
-		return null;
+	@GetMapping("/delete/{id}")
+	public String deleteCurso(@PathVariable(value="id") long id) {
+		this.cursoService.deleteCursoById(id);
+		return "redirect:/";
 	}
 	
-	public String showFormForUpdate() {
-		return null;
+	@GetMapping("/update/{id}")
+	public String showFormForUpdate(@PathVariable(value="id") long id, Model model) {
+		Curso curso=this.cursoService.getCursoById(id);
+		model.addAttribute("curse", curso);
+		return "actualizar_curso";
 	}
 	
 	@GetMapping("/add")

@@ -24,8 +24,8 @@
 				<td th:text="${curse.nombreInstructor}"></td>
 				<td th:text="${curse.email}"></td>
 				<td>
-					<a class="btn btn-primary">Actualizar</a>
-					<a class="btn btn-danger">Eliminar</a>
+					<a th:href="@{'/update/'+${curse.id}}" class="btn btn-primary">Actualizar</a>
+					<a th:href="@{'/delete/'+${curse.id}}" class="btn btn-danger">Eliminar</a>
 				</td>
 			</tr>
 		</tbody>
