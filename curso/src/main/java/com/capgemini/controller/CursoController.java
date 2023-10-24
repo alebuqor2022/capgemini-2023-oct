@@ -7,7 +7,9 @@ import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.capgemini.model.Curso;
@@ -24,8 +26,10 @@ public class CursoController {
 		return findPaginated(1,"nombreCurso","asc", model);
 	}
 	
-	public String saveCurso() {
-		return null;
+	@PostMapping("/save")
+	public String saveCurso(@ModelAttribute("curse") Curso curso) {
+		cursoService.saveCurso(curso);
+		return "redirect:/";
 	}
 	
 	public String deleteCurso() {
@@ -36,8 +40,11 @@ public class CursoController {
 		return null;
 	}
 	
-	public String showNewCursoForm() {
-		return null;
+	@GetMapping("/add")
+	public String showNewCursoForm(Model model) {
+		Curso curso=new Curso();
+		model.addAttribute("curse", curso);
+		return "nuevo_curso";
 	}
 	
 	@GetMapping("/page/{pageNo}")
@@ -50,7 +57,7 @@ public class CursoController {
 		int pageSize=4;
 		Page<Curso> page=cursoService.findPaginated(pageNo, pageSize, sortField, sortDir);
 		List<Curso> listCursos=page.getContent();
-		
+		System.out.println(listCursos.get(1).getNombreCurso());
 		model.addAttribute("sortDir", sortDir);
 		model.addAttribute("sortField", sortField);
 		model.addAttribute("currentPage", pageNo);
