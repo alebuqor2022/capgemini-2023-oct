@@ -1,0 +1,1 @@
+no se subio la carpeta .expo ni la node_modules
