@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "228016941999",
+    "project_id": "reactnative-capgemini",
+    "storage_bucket": "reactnative-capgemini.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:228016941999:android:4347343899374a08bbdd5a",
+        "android_client_info": {
+          "package_name": "com.capgemini"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyACWNAX5V6IFzHV8B97MWraOWKbisVkpEA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
